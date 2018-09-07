@@ -7,7 +7,7 @@ class CarAdmin(admin.ModelAdmin):
 
 
 class BookingAdmin(admin.ModelAdmin):
-    list_display = ('id', 'car', 'first_name', 'last_name', 'start_date', 'end_date')
+    list_display = ('id', 'car', 'start_date', 'end_date', 'user')
 
 
 admin.site.register(models.Car, CarAdmin)

@@ -1,4 +1,7 @@
 from django.db import models
+from django.conf import settings
+
+User = settings.AUTH_USER_MODEL
 
 
 class Car(models.Model):
@@ -12,11 +15,10 @@ class Car(models.Model):
 
 
 class Booking(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     car = models.ForeignKey(Car, on_delete=models.CASCADE)
-    first_name = models.CharField(max_length=50)
-    last_name = models.CharField(max_length=50)
     start_date = models.DateTimeField()
     end_date = models.DateTimeField()
 
     def __str__(self):
-        return self.first_name
+        return self.user.username
