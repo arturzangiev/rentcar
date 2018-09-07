@@ -1,10 +1,8 @@
 # car rental service
 
-admin user: test
-admin pass: test
+admin_user: test, admin_pass: test
 
-test user: artur
-test pass: user123456789
+test_user: artur, test_pass: user123456789
 
 Live version of the application is available on Heroku:
 
